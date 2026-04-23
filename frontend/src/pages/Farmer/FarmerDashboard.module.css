@@ -1,0 +1,167 @@
+.container {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  color: #388e3c;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.headerInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+
+.searchBar input {
+    padding: 8px 15px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    width: 300px;
+}
+
+.userInfo {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.logoutButton {
+    background: #f44336;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+.statsCards {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.card {
+    flex: 1;
+    background-color: #f7f7f7;
+    padding: 15px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+}
+
+.contentGrid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+}
+
+.sectionHeader {
+    color: #388e3c;
+    font-size: 18px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+    margin: 20px 0 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.addProductBtn {
+    background-color: #2196f3;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.productCard {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    position: relative;
+    cursor: pointer;
+    transition: box-shadow 0.2s;
+}
+
+.productCard:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.statusTag {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+}
+
+.available {
+    background-color: #4CAF50;
+}
+
+.lowStock {
+    background-color: #ff9800;
+}
+
+.productCard h4 {
+    margin: 0 0 5px 0;
+    font-size: 16px;
+}
+
+.details, .stockInfo {
+    font-size: 13px;
+    color: #666;
+}
+
+.categoryList {
+    list-style: none;
+    padding: 0;
+}
+
+.categoryList li {
+    padding: 5px 0;
+    font-size: 14px;
+    color: #555;
+    border-bottom: 1px dashed #eee;
+}
+
+.buyerItem {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    font-size: 14px;
+    border-bottom: 1px dashed #eee;
+}
+
+.time {
+    color: #999;
+    font-size: 12px;
+}
+
+.recentOrder {
+    font-size: 13px;
+    padding: 5px 0;
+    border-bottom: 1px dashed #eee;
+}
+

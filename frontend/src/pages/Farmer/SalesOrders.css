@@ -1,0 +1,236 @@
+.sales-orders-container {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f7f7f7;
+    font-family: Arial, sans-serif;
+}
+
+/* --- SIDEBAR NAV (Farmer specific icons/links) --- */
+.sidebar-nav {
+    width: 200px;
+    background-color: #ffffff;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
+    padding: 20px 0;
+    flex-shrink: 0;
+}
+
+.sidebar-logo {
+    color: #4CAF50;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0 20px 5px 20px;
+    margin: 0;
+}
+
+.farmer-portal-text {
+    font-size: 12px;
+    color: #999;
+    padding: 0 20px 15px 20px;
+    margin: 0;
+    border-bottom: 1px solid #eee;
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    padding-top: 15px;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    text-decoration: none;
+    color: #555;
+    font-size: 14px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.nav-item:hover, .nav-item.active {
+    background-color: #e8f5e9; 
+    color: #4CAF50;
+    font-weight: bold;
+    border-left: 3px solid #4CAF50;
+    padding-left: 17px;
+}
+
+.logout-link {
+    margin-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+/* --- MAIN CONTENT AREA --- */
+.sales-orders-main-content {
+    flex-grow: 1;
+    padding: 30px;
+}
+
+.orders-header {
+    margin-bottom: 25px;
+    position: relative;
+    width: 100%; 
+}
+
+.orders-header h2 {
+    font-size: 24px;
+    color: #333;
+    margin: 0 0 5px 0;
+}
+
+.orders-subtitle {
+    font-size: 14px;
+    color: #777;
+    margin: 0;
+}
+
+.filter-button {
+    position: absolute;
+    top: 5px;
+    right: 0;
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* --- METRICS ROW --- */
+.metrics-row-sales {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+    width: 100%; 
+}
+
+.metric-card-sale {
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border: 1px solid #eee;
+    position: relative;
+    overflow: hidden;
+}
+
+.metric-value {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.metric-label {
+    font-size: 14px;
+    color: #777;
+    margin: 0;
+}
+
+.metric-icon-sale {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    opacity: 0.8;
+}
+
+/* Metric Card Colors (Farmer Portal) */
+.metric-card-sale.action-needed { border-left: 5px solid #FFC107; }
+.metric-card-sale.action-needed .metric-icon-sale { color: #FFC107; }
+
+.metric-card-sale.pending-delivery { border-left: 5px solid #2196f3; }
+.metric-card-sale.pending-delivery .metric-icon-sale { color: #2196f3; }
+
+.metric-card-sale.payments-due { border-left: 5px solid #4CAF50; }
+.metric-card-sale.payments-due .metric-icon-sale { color: #4CAF50; }
+
+
+/* --- ORDERS TABLE --- */
+.orders-table-section {
+    width: 100%; 
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.orders-table-section h3 {
+    font-size: 18px;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+thead th {
+    text-align: left;
+    padding: 12px 15px;
+    border-bottom: 2px solid #ddd;
+    color: #555;
+    font-weight: bold;
+}
+
+tbody td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+    color: #333;
+    vertical-align: middle;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* --- BADGES (Status & Payment) --- */
+.status-badge-table {
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+    display: inline-block;
+    min-width: 80px;
+    text-align: center;
+}
+
+/* Order Status Colors */
+.status-outbound, .status-paid { background-color: #19a225; color: #044506; } /* Delivered/Paid Green */
+.status-intransit, .status-processing { background-color: #e3f2fd; color: #2196f3; } /* In Transit/Processing Blue */
+.status-new-action { background-color: #ffe0b2; color: #ff9800; } /* New Order Yellow/Orange */
+
+/* Payment Status Colors */
+.status-payment-due { background-color: #ffe8e8; color: #DC3545; } /* Awaiting Payment Red */
+
+
+/* --- ACTION COLUMN --- */
+.action-view-button {
+    background: none;
+    border: none;
+    color: #4CAF50;
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 13px;
+    padding: 0;
+}
+
+.action-view-button:hover {
+    color: #45a049;
+}
+
+.table-footer {
+    font-size: 13px;
+    color: #777;
+    margin-top: 15px;
+    text-align: right;
+}

@@ -1,0 +1,334 @@
+.my-orders-container {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f7f7f7;
+    font-family: Arial, sans-serif;
+}
+
+/* --- SIDEBAR NAV (Reused) --- */
+.sidebar-nav {
+    width: 200px;
+    background-color: #ffffff;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
+    padding: 20px 0;
+    flex-shrink: 0;
+}
+
+.sidebar-logo {
+    color: #4CAF50;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0 20px 5px 20px;
+    margin: 0;
+}
+
+.vendor-portal-text {
+    font-size: 12px;
+    color: #999;
+    padding: 0 20px 15px 20px;
+    margin: 0;
+    border-bottom: 1px solid #eee;
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    padding-top: 15px;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    text-decoration: none;
+    color: #555;
+    font-size: 14px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.nav-item:hover, .nav-item.active {
+    background-color: #e8f5e9; 
+    color: #4CAF50;
+    font-weight: bold;
+    border-left: 3px solid #4CAF50;
+    padding-left: 17px;
+}
+
+.logout-link {
+    margin-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+/* --- MAIN CONTENT & HEADER --- */
+.orders-main-content {
+    flex-grow: 1;
+    padding: 30px;
+}
+
+/* FULL WIDTH: Removed max-width constraints */
+.orders-header {
+    margin-bottom: 25px;
+    position: relative;
+    width: 100%; 
+}
+
+.orders-header h2 {
+    font-size: 24px;
+    color: #333;
+    margin: 0 0 5px 0;
+}
+
+.orders-subtitle {
+    font-size: 14px;
+    color: #777;
+    margin: 0;
+}
+
+.filter-button {
+    position: absolute;
+    top: 5px;
+    right: 0;
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+
+/* --- METRICS ROW --- */
+.metrics-row-orders {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+    width: 90%; 
+}
+
+.metric-card-order {
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    min-height: 80px;
+}
+
+.metric-card-order.due { border-left: 5px solid #DC3545; }
+.metric-card-order.transit { border-left: 5px solid #FFC107; }
+.metric-card-order.delivered { border-left: 5px solid #4CAF50; }
+
+.metric-value {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.metric-label {
+    font-size: 14px;
+    color: #777;
+    margin: 0;
+}
+
+.metric-label strong {
+    color: #DC3545;
+}
+
+.metric-icon-small {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    opacity: 0.7;
+}
+
+.metric-card-order.due .metric-icon-small { color: #DC3545; }
+.metric-card-order.transit .metric-icon-small { color: #FFC107; }
+.metric-card-order.delivered .metric-icon-small { color: #4CAF50; }
+
+
+/* --- ORDERS TABLE --- */
+.orders-table-section {
+    width: 95%; 
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.orders-table-section h3 {
+    font-size: 18px;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+table {
+    width: 95%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+thead th {
+    text-align: left;
+    padding: 12px 15px;
+    border-bottom: 2px solid #ddd;
+    color: #555;
+    font-weight: bold;
+}
+
+tbody td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+    color: #333;
+    vertical-align: middle;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* --- BADGES (Status & Payment) --- */
+.status-badge-table {
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+    display: inline-block;
+    min-width: 80px;
+    text-align: center;
+}
+
+/* Order Status Colors */
+.status-accepted { background-color: #e8f5e9; color: #4CAF50; }
+.status-new { background-color: #fff8e1; color: #ffc107; }
+.status-delivered { background-color: #59db64; color: #073d09; }
+.status-awaiting-acceptance { background-color: #e3f2fd; color: #2196f3; }
+.status-rejected { background-color: #ffe8e8; color: #DC3545; }
+
+/* Payment Status Colors */
+.status-payment-due { background-color: #ffe8e8; color: #DC3545; }
+.status-paid { background-color: #e8f5e9; color: #4CAF50; }
+.status-pending { background-color: #fff8e1; color: #ff9800; }
+.status-cancelled { background-color: #f0f0f0; color: #777; }
+
+
+/* --- ACTION COLUMN --- */
+.action-pay-button {
+    background-color: #fa07d2;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+}
+.action-delete-button {
+    background-color: #DC3545;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+}
+/* --- STAR RATING WRAPPER (Custom adjustment for the library) --- */
+.star-rating-wrapper {
+    /* Ensures the rating component is correctly vertically aligned and sized */
+    display: inline-flex;
+    align-items: center;
+    /* Optional: If the library stars are too large, you can scale them here */
+    transform: scale(0.9); 
+}
+
+
+.table-footer {
+    font-size: 13px;
+    color: #777;
+    margin-top: 15px;
+    text-align: right;
+}
+
+/* --- FILTER MODAL (Remains the same) --- */
+.filter-modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.filter-modal-content {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    width: 300px;
+}
+
+.filter-modal-content h3 {
+    margin-top: 0;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #333;
+}
+
+.filter-date-group {
+    margin-bottom: 15px;
+}
+
+.filter-date-group label {
+    display: block;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.filter-date-group input {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.modal-apply-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.modal-close-button {
+    background: none;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #777;
+}

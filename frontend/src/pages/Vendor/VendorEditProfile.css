@@ -1,0 +1,233 @@
+.settings-container {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f7f7f7;
+    font-family: Arial, sans-serif;
+}
+
+/* --- SIDEBAR NAV (Consistent with MyOrders) --- */
+.sidebar-nav {
+    width: 200px;
+    background-color: #ffffff;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
+    padding: 20px 0;
+    flex-shrink: 0;
+}
+
+.sidebar-logo {
+    color: #4CAF50;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0 20px 5px 20px;
+    margin: 0;
+}
+
+.vendor-portal-text {
+    font-size: 12px;
+    color: #999;
+    padding: 0 20px 15px 20px;
+    margin: 0;
+    border-bottom: 1px solid #eee;
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    padding-top: 15px;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    text-decoration: none;
+    color: #555;
+    font-size: 14px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.nav-item:hover, .nav-item.active {
+    background-color: #e8f5e9; 
+    color: #4CAF50;
+    font-weight: bold;
+    border-left: 3px solid #4CAF50;
+    padding-left: 17px;
+}
+
+.logout-link {
+    margin-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+
+/* --- MAIN CONTENT AREA --- */
+.settings-main-content {
+    flex-grow: 1;
+    padding: 30px;
+    max-width: 900px; /* Constrain content width for better readability */
+    margin: 0 auto; /* Center the content */
+}
+
+.settings-header {
+    margin-bottom: 25px;
+}
+
+.settings-header h2 {
+    font-size: 24px;
+    color: #333;
+    margin: 0 0 5px 0;
+}
+
+.settings-subtitle {
+    font-size: 14px;
+    color: #777;
+    margin: 0;
+}
+
+/* --- FORM STYLING --- */
+.profile-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* Space between cards */
+}
+
+.form-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border: 1px solid #eee;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.card-icon {
+    font-size: 20px;
+    color: #4CAF50;
+    margin-right: 10px;
+}
+
+.card-header h3 {
+    font-size: 18px;
+    color: #333;
+    margin: 0;
+}
+
+/* Form groups for layout */
+.form-group-full {
+    margin-bottom: 15px;
+}
+
+.form-group-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.form-group-row .form-group {
+    flex: 1; /* Each group takes equal space */
+}
+
+.form-group label {
+    display: block;
+    font-size: 13px;
+    color: #555;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"] {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; /* Include padding in width */
+    font-size: 14px;
+    color: #333;
+}
+
+.form-group input:focus {
+    border-color: #4CAF50;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+}
+
+/* Phone input with prefix */
+.phone-input-group {
+    display: flex;
+    align-items: center;
+}
+
+.phone-prefix {
+    background-color: #e9ecef;
+    border: 1px solid #ddd;
+    border-right: none;
+    padding: 10px 12px;
+    border-radius: 4px 0 0 4px;
+    font-size: 14px;
+    color: #555;
+}
+
+.phone-input-group input {
+    border-radius: 0 4px 4px 0; /* Only right corners rounded */
+}
+
+/* --- Validation Error Styling --- */
+.input-error {
+    border-color: #DC3545 !important; /* Highlight error fields */
+}
+
+.error-message {
+    color: #DC3545;
+    font-size: 12px;
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+/* --- Action Buttons --- */
+.form-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.save-button, .reset-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background-color 0.2s, box-shadow 0.2s;
+    display: flex;
+    align-items: center;
+}
+
+.save-button {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.save-button:hover {
+    background-color: #45a049;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.reset-button {
+    background-color: #f0f0f0;
+    color: #555;
+    border: 1px solid #ccc;
+}
+
+.reset-button:hover {
+    background-color: #e0e0e0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}

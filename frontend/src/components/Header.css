@@ -1,0 +1,8 @@
+.sm-header { display:flex; justify-content:space-between; align-items:center; padding:12px 24px; background:#fff; border-bottom:1px solid #eee; }
+.sm-logo { font-weight:700; color:#388e3c; text-decoration:none; font-size:18px; }
+.sm-right { display:flex; gap:8px; align-items:center; }
+.sm-btn { background:#388e3c; color:white; border:none; padding:8px 10px; border-radius:6px; cursor:pointer; }
+.sm-ghost { background:transparent; color:#388e3c; border:1px solid #388e3c; }
+.sm-link { color:#1976d2; text-decoration:none; font-weight:600; }
+.sm-welcome { margin-right:8px; font-weight:600; }
+.sm-logout { background:#f44336; }

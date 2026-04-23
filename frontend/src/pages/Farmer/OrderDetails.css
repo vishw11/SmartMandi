@@ -1,0 +1,429 @@
+.order-detail-page {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f7f7f7;
+    font-family: Arial, sans-serif;
+}
+
+/* --- SIDEBAR NAV (Farmer Portal) --- */
+.sidebar-nav {
+    width: 200px;
+    background-color: #ffffff;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
+    padding: 20px 0;
+    flex-shrink: 0;
+}
+
+.sidebar-logo {
+    color: #4CAF50;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0 20px 5px 20px;
+    margin: 0;
+}
+
+.portal-text {
+    font-size: 12px;
+    color: #999;
+    padding: 0 20px 15px 20px;
+    margin: 0;
+    border-bottom: 1px solid #eee;
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    padding-top: 15px;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    text-decoration: none;
+    color: #555;
+    font-size: 14px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.nav-item:hover, .nav-item.active {
+    background-color: #e8f5e9; 
+    color: #4CAF50;
+    font-weight: bold;
+    border-left: 3px solid #4CAF50;
+    padding-left: 17px;
+}
+
+.logout-link {
+    margin-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+/* --- MAIN CONTENT & HEADER --- */
+.order-detail-main {
+    flex-grow: 1;
+    padding: 30px;
+}
+
+.detail-header {
+    margin-bottom: 15px;
+    position: relative;
+    max-width: 1000px; /* Limits content width slightly */
+}
+
+.detail-header h2 {
+    font-size: 24px;
+    color: #333;
+    margin: 0 0 5px 0;
+}
+
+.detail-subtitle {
+    font-size: 14px;
+    color: #777;
+    margin: 0;
+}
+
+.back-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: none;
+    border: none;
+    color: #4CAF50;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 5px 0;
+}
+
+.back-button:hover {
+    text-decoration: underline;
+}
+
+/* --- ORDER STATUS BANNER --- */
+.status-banner {
+    padding: 15px 25px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    border-left: 5px solid;
+    max-width: 1000px;
+}
+
+.status-banner.status-awaiting {
+    background-color: #fff8e1;
+    border-left-color: #ff9800; /* Orange */
+}
+
+.status-banner.status-accepted {
+    background-color: #e8f5e9;
+    border-left-color: #4CAF50; /* Green */
+}
+
+.status-banner.status-rejected {
+    background-color: #ffe8e8;
+    border-left-color: #DC3545; /* Red */
+}
+
+.banner-text {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin: 0 0 5px 0;
+}
+
+.banner-subtext {
+    font-size: 14px;
+    color: #555;
+    margin: 0;
+}
+
+.timer-text {
+    font-weight: bold;
+    color: #DC3545;
+}
+
+/* --- TWO-COLUMN LAYOUT --- */
+.order-content-layout {
+    display: flex;
+    gap: 30px;
+    max-width: 1000px;
+}
+
+.order-info-column {
+    flex: 3; /* Takes up more horizontal space */
+}
+
+.action-financial-column {
+    flex: 1.5;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* --- CARD STYLING --- */
+.card-product-list, .card-section, .card-action-box, .card-financial-box, .card-logistics-box {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+}
+
+.card-product-list h3, .card-section h3, .card-action-box h3, .card-financial-box h3 {
+    font-size: 18px;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+/* Product Table */
+.card-product-list table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.card-product-list th, .card-product-list td {
+    text-align: left;
+    padding: 10px 0;
+    border-bottom: 1px dashed #eee;
+}
+
+.card-product-list th:last-child, .card-product-list td:last-child {
+    text-align: right;
+    font-weight: bold;
+}
+
+/* Buyer Notes */
+.note-box {
+    background-color: #f7f7f7;
+    padding: 15px;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #555;
+    border: 1px solid #ddd;
+}
+
+/* Buyer & Delivery Info */
+.info-group {
+    margin-bottom: 20px;
+}
+
+.info-title {
+    font-size: 15px;
+    color: #4CAF50;
+    margin: 0 0 10px 0;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #eee;
+}
+
+.info-group p {
+    font-size: 14px;
+    color: #333;
+    margin: 4px 0;
+}
+
+.delivery-date-text strong {
+    color: #DC3545;
+}
+
+/* --- FINANCIALS & ACTIONS COLUMN STYLES --- */
+
+/* Farmer Actions */
+.card-action-box {
+    border: 1px solid #ddd;
+}
+
+.action-button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    transition: background-color 0.2s;
+}
+
+.action-button.confirm {
+    background-color: #4CAF50;
+    color: white;
+}
+.action-button.confirm:hover { background-color: #45a049; }
+
+.action-button.reject {
+    background-color: #f0f0f0;
+    color: #DC3545;
+    border: 1px solid #DC3545;
+}
+.action-button.reject:hover { background-color: #ffeaea; }
+
+.action-status-message {
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 4px;
+}
+.action-status-message.accepted { background-color: #e8f5e9; color: #4CAF50; }
+.action-status-message.rejected { background-color: #ffe8e8; color: #DC3545; }
+
+
+/* Financials */
+.financial-summary {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 5px 10px;
+    font-size: 14px;
+}
+
+.financial-summary p {
+    margin: 0;
+}
+
+.commission-amount {
+    color: #DC3545;
+}
+
+.net-payable {
+    grid-column: 1 / span 2;
+    border-top: 1px dashed #ddd;
+    margin-top: 10px;
+    padding-top: 10px;
+    display: contents; /* Ensures children flow correctly under the grid */
+}
+
+.net-payable p {
+    font-weight: bold;
+}
+
+.net-amount {
+    font-size: 18px;
+    color: #4CAF50;
+}
+
+/* Status & Logistics */
+.payment-status-badge {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 4px;
+    background-color: #ffe8e8;
+    color: #DC3545;
+    font-weight: bold;
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.payment-note {
+    font-size: 12px;
+    color: #777;
+    margin: 0;
+}
+
+.ready-for-pickup-button {
+    background-color: #f0f0f0;
+    color: #2196f3;
+    border: 1px solid #2196f3;
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-size: 13px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.2s;
+}
+
+.ready-for-pickup-button:hover {
+    background-color: #e3f2fd;
+}
+/* --- OTP + Delivery Section Styles --- */
+
+.delivery-controls {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background: #fafafa;
+}
+
+.delivery-controls h4 {
+  font-size: 18px;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.otp-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.otp-input {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  width: 180px;
+}
+
+.otp-input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.otp-button {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  background-color: #ff9800;
+  color: white;
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  transition: 0.2s;
+}
+
+.otp-button.verify {
+  background-color: #2e7d32;
+}
+
+.otp-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.otp-button:hover:not(:disabled) {
+  opacity: 0.85;
+}
+
+.otp-error {
+  color: #d32f2f;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.action-button.delivery {
+  margin-top: 10px;
+  width: 100%;
+  background-color: #11ff00;
+  color: white;
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  transition: 0.2s;
+  margin-left: -0.5%;
+}
+
+.action-button.delivery:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.action-button.delivery:hover:not(:disabled) {
+  background-color: #fb8c00;
+}

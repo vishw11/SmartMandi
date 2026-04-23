@@ -1,0 +1,366 @@
+.product-details-page {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f7f7f7;
+    font-family: Arial, sans-serif;
+}
+
+/* --- SIDEBAR NAV (Reused) --- */
+.sidebar-nav {
+    width: 200px;
+    background-color: #ffffff;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
+    padding: 20px 0;
+    flex-shrink: 0;
+}
+
+.sidebar-logo {
+    color: #4CAF50;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0 20px 5px 20px;
+    margin: 0;
+}
+
+.vendor-portal-text {
+    font-size: 12px;
+    color: #999;
+    padding: 0 20px 15px 20px;
+    margin: 0;
+    border-bottom: 1px solid #eee;
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    padding-top: 15px;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    text-decoration: none;
+    color: #555;
+    font-size: 14px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.nav-item i {
+    margin-right: 10px;
+    width: 15px;
+}
+
+.nav-item:hover, .nav-item.active {
+    background-color: #e8f5e9; 
+    color: #4CAF50;
+    font-weight: bold;
+    border-left: 3px solid #4CAF50;
+    padding-left: 17px;
+}
+
+/* --- MAIN CONTENT & HEADER --- */
+.product-main-content {
+    flex-grow: 1;
+    padding: 30px;
+}
+
+.product-header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.product-header h2 {
+    font-size: 24px;
+    color: #333;
+    margin: 0 0 5px 0;
+}
+
+.product-subtitle {
+    font-size: 14px;
+    color: #777;
+    margin: 0;
+}
+
+.back-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: none;
+    border: none;
+    color: #4CAF50;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 5px 0;
+}
+
+.back-button:hover {
+    text-decoration: underline;
+}
+
+/* --- PRODUCT LAYOUT --- */
+.product-layout {
+    display: flex;
+    gap: 30px;
+}
+
+.product-visuals-col {
+    flex: 2;
+    min-width: 450px;
+}
+
+.product-info-col {
+    flex: 1.5;
+    min-width: 350px;
+}
+
+/* --- IMAGE GALLERY --- */
+.main-image-container {
+    width: 100%;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.main-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.thumbnail-gallery {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.thumbnail {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: border-color 0.2s;
+}
+
+.thumbnail.active {
+    border-color: #4CAF50;
+}
+
+.placeholder-thumb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px dashed #ccc;
+    color: #ccc;
+    font-size: 20px;
+}
+
+/* --- DESCRIPTION BOX --- */
+.product-description-box {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.product-description-box p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* --- INFO & ACTIONS COLUMN --- */
+.info-section {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+}
+
+.section-title {
+    font-size: 16px;
+    color: #4CAF50;
+    padding-bottom: 5px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.product-name-title {
+    font-size: 24px;
+    margin: 0 0 5px 0;
+}
+
+.reviews-text {
+    font-size: 14px;
+    color: #ff9800;
+    margin: 0 0 10px 0;
+}
+
+.rating-star {
+    color: #ffc107;
+    margin-right: 5px;
+}
+
+.product-price-display {
+    font-size: 28px;
+    font-weight: bold;
+    color: #4CAF50;
+    display: block;
+    margin-bottom: 15px;
+}
+
+/* Inventory Section */
+.inventory-text, .moq-text {
+    font-size: 14px;
+    color: #333;
+    margin: 5px 0;
+}
+
+/* Order Section */
+.order-input-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+.order-quantity-group {
+    flex: 1;
+}
+
+.order-quantity-group label {
+    display: block;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.order-quantity-group input {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.order-quantity-group input.input-error {
+    border-color: #e74c3c;
+}
+
+.estimated-cost-group {
+    text-align: right;
+    flex-shrink: 0;
+}
+
+.estimated-cost-label {
+    font-size: 14px;
+    color: #777;
+    margin: 0;
+}
+
+.estimated-cost-value {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin: 5px 0 0 0;
+}
+
+.order-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.action-button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.action-button i {
+    margin-right: 8px;
+}
+
+.add-to-basket {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.add-to-basket:hover {
+    background-color: #45a049;
+}
+
+.contact-supplier {
+    background-color: #f0f0f0;
+    color: #4CAF50;
+    border: 1px solid #4CAF50;
+}
+
+.contact-supplier:hover {
+    background-color: #e8f5e9;
+}
+
+.disabled-button {
+    background-color: #ccc !important;
+    cursor: not-allowed;
+    color: #666 !important;
+    border: none !important;
+}
+
+/* Supplier Section */
+.supplier-name {
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0 0 5px 0;
+    color: #333;
+}
+
+.supplier-location, .supplier-stats {
+    font-size: 14px;
+    color: #555;
+    margin: 3px 0;
+}
+
+.view-profile-link {
+    background: none;
+    border: none;
+    color: #4CAF50;
+    padding: 0;
+    font-size: 14px;
+    margin-top: 10px;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* --- LOADING STATE (Reused) --- */
+.loading-state {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.loading-text {
+    font-size: 18px;
+    color: #555;
+    margin-top: 20px;
+}

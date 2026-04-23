@@ -1,0 +1,231 @@
+.profile-edit-page {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f7f7f7;
+    font-family: Arial, sans-serif;
+}
+
+/* --- SIDEBAR NAV (Reused) --- */
+.sidebar-nav {
+    width: 200px;
+    background-color: #ffffff;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
+    padding: 20px 0;
+    flex-shrink: 0;
+}
+
+.sidebar-logo {
+    color: #4CAF50;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0 20px 20px 20px;
+    margin: 0;
+    border-bottom: 1px solid #eee;
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    padding-top: 15px;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    text-decoration: none;
+    color: #555;
+    font-size: 14px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.nav-item i {
+    margin-right: 10px;
+    width: 15px;
+}
+
+.nav-item:hover, .nav-item.active {
+    background-color: #e8f5e9; /* Light green highlight for active settings page */
+    color: #4CAF50;
+    font-weight: bold;
+    border-right: 3px solid #4CAF50;
+}
+
+/* --- MAIN CONTENT --- */
+.profile-form-main {
+    flex-grow: 1;
+    padding: 30px;
+}
+
+.form-header {
+    margin-bottom: 25px;
+}
+
+.form-header h2 {
+    font-size: 24px;
+    color: #333;
+    margin: 0 0 5px 0;
+}
+
+.form-subtitle {
+    font-size: 14px;
+    color: #777;
+}
+
+/* --- FORM SECTIONS --- */
+.profile-form {
+    max-width: 900px;
+}
+
+.form-section {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.section-title {
+    font-size: 18px;
+    color: #4CAF50;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e8f5e9;
+    margin-top: 0;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.section-title i {
+    color: #4CAF50;
+}
+
+/* --- INPUTS & GROUPS --- */
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-row {
+    display: flex;
+    gap: 20px;
+}
+
+.half-width {
+    flex: 1;
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.profile-form input[type="text"],
+.profile-form input[type="email"],
+.profile-form input[type="tel"] {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+}
+
+.profile-form input:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* Validation Styling */
+.input-error {
+    border-color: #e74c3c !important; 
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* --- BANKING NOTE --- */
+.banking-note {
+    border-left: 4px solid #4CAF50;
+    background-color: #f9fff9;
+    padding: 10px 15px;
+    margin: 0 0 20px 0;
+    font-size: 14px;
+    color: #555;
+    border-radius: 4px;
+}
+
+.banking-note i {
+    color: #4CAF50;
+    margin-right: 8px;
+}
+
+/* --- FORM ACTIONS --- */
+.form-actions {
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+    margin-top: 10px;
+    padding-bottom: 20px;
+}
+
+.submit-button {
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.update-button {
+    background-color: #4CAF50; /* Green for Save */
+}
+
+.update-button:hover {
+    background-color: #45a049;
+}
+
+.submit-button i {
+    margin-right: 8px;
+}
+
+.cancel-button {
+    background: none;
+    color: #777;
+    padding: 12px 25px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background-color 0.2s;
+}
+
+.cancel-button:hover {
+    background-color: #f0f0f0;
+}
+
+/* --- LOADING STATE (Reused) --- */
+.loading-state {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.loading-text {
+    font-size: 18px;
+    color: #555;
+    margin-top: 20px;
+}

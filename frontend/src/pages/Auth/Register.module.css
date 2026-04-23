@@ -1,0 +1,103 @@
+.container {
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  color: #388e3c;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: 22px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.form input[type="text"], 
+.form input[type="email"], 
+.form input[type="password"],
+.form input[type="tel"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.label {
+  display: block;
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.accountType {
+  border: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.accountType label {
+  margin-right: 20px;
+  font-weight: normal;
+}
+
+.subtitle {
+  color: #388e3c;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 5px;
+  margin: 20px 0 15px 0;
+}
+
+.row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.row > .inputGroup {
+    flex: 1;
+}
+
+.row input {
+    margin-bottom: 0;
+}
+
+.terms {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.terms label {
+  margin-left: 8px;
+  font-weight: normal;
+}
+
+.registerButton {
+  width: 100%;
+  padding: 15px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 25px;
+}
+
+
+---
+
+## 3. Farmer Portal Pages (P6, P8, P11, P12, P14, P15, P17)
+
+### `src/pages/Farmer/FarmerDashboard.js` (P6)

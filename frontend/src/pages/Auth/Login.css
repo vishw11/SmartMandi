@@ -1,0 +1,134 @@
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f7f7f7; /* Light background as seen in the image */
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* The central card container */
+.login-card {
+    width: 100%;
+    max-width: 380px; /* Max width for the card */
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Logo and Welcome Text */
+.logo-text {
+    color: #4CAF50; /* Green color for SmartMandi */
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.welcome-text {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+/* Form Styling */
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group {
+    margin-bottom: 15px; /* Space between input fields */
+    text-align: left;
+}
+
+/* Input Fields */
+.login-card input[type="text"],
+.login-card input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.login-card input:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* Validation Styling */
+.input-error {
+    border-color: #e74c3c !important; /* Red border for errors */
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* Forgot Password Link */
+.forgot-password-container {
+    text-align: right;
+    margin-bottom: 25px;
+}
+
+.forgot-password-link {
+    color: #999;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.forgot-password-link:hover {
+    text-decoration: underline;
+}
+
+/* Login Button */
+.login-button {
+    background-color: #4CAF50; /* Green background */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.login-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Separator '...' */
+.separator p {
+    color: #ccc;
+    font-size: 24px;
+    line-height: 0.5;
+    margin: 25px 0 15px 0;
+}
+
+/* Sign Up Link/Button */
+.signup-link-button {
+    background: none;
+    border: none;
+    color: #4CAF50; /* Green link color */
+    cursor: pointer;
+    font-size: 15px;
+    margin-top: 5px;
+    text-decoration: none;
+    padding: 0;
+    display: inline-block;
+}
+
+.signup-link-button:hover {
+    text-decoration: underline;
+}

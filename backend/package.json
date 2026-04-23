@@ -1,0 +1,30 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "jest --coverage --runInBand",
+    "test:unit": "jest --runInBand --testPathPatterns=unit",
+    "test:integration": "jest --runInBand --testPathPatterns=integration" 
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.13.1",
+    "body-parser": "^2.2.0",
+    "child_process": "^1.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "jest": "^30.2.0",
+    "mongodb-memory-server": "^7.6.3",
+    "mongoose": "^8.19.2",
+    "nodemailer": "^7.0.10",
+    "nodemon": "^3.1.10",
+    "stripe": "^19.2.0",
+    "supertest": "^7.1.4"
+  },
+  "keywords": []
+}
