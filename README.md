@@ -61,11 +61,10 @@ SmartMandi solves this problem by providing a digital marketplace where:
 
 ### Database
 
-- MongoDB / MongoDB Atlas  
+- MongoDB Atlas  
 
 ### Other Tools
 
-- JWT Authentication  
 - Cloudinary (Image Uploads)  
 - REST APIs  
 
